@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Navgation */
@@ -153,13 +154,13 @@ span:nth-child(3){
   position: fixed;
   top: -1000px;
   left: 0;
-  background: rgb(73, 70, 70);
+  background: rgba(73, 70, 70, 0.89);
   width: 100%;
   height: 100vh;
   z-index: -1;
   opacity: 0;
   text-align: center;
-  /* transition: all 100ms ease-out; */
+  /* transition: all 100ms ease-out; */ 
   
 }
 
@@ -244,7 +245,81 @@ span:nth-child(3){
 #wshow p {
   color: white;
   line-height: 1;
-
 }
+
+.container {
+  padding: 0 30px;
+}
+
+.sec {
+  /* background-color: rgb(206, 206, 206); */
+}
+
+.sec p {
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 2;
+  font-weight: 500;
+  padding: 0 30px;
+}
+
+.sec1 h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+
+/* Project Section */
+
+#proj1 {
+  width:80%;
+  height:100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 7px 0 rgba(0, 0, 0, 0.178);
+  
+}
+#proj1 img {
+  width: 100%;
+}
+
+#proj1 p {
+  padding: 20px;
+}
+
+#proj2 {
+  width:80%;
+  height:100%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 7px 0 rgba(0, 0, 0, 0.178)
+}
+#proj2 img {
+  width: 100%;
+}
+
+#proj2 p {
+  padding: 20px;
+}
+
+/* Contact Me */
+
+
+footer{
+  height: 20vh;
+  width: 100%;
+  background: rgb(79, 87, 88);
+}
+
+footer p {
+  padding: 30px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
 
  
