@@ -4,10 +4,269 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Navgation */
+body {
+  background: #333;
+  color: #ccc;
+  height: 100vh;
+}
+
+/* Nav */
+.hidden{
+  opacity: 0;
+}
+#wrapper ul{
+  text-align: right;
+  margin-top: 20px;
+}
+
+#wrapper ul li {
+  display: inline-block;
+}
+
+#wrapper ul li a{
+  text-overflow: unset;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.9em;
+  font-weight: 700;
+  padding-right: 25px;
+}
+
+#wrapper ul li a:hover {
+  color: #ccc
+}
+
+
+
+
+.showcase {
+  background: url(../images/alone-clouds-golden-hour-670720.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+}
+
+#wshow {
+  /* text-align: center;
+  position: relative;
+  top: 190px;
+  padding: 0 30px;
+  outline: none; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 3rem;
+}
+
+#wshow h1{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 3.5rem;
+  margin: 0.4rem;
+}
+
+#wshow h2{
+  color: rgb(235, 231, 231);
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 2rem;
+  margin: 0.4rem;
+
+}
+
+#wshow p {
+  color: white;
+  line-height: 1;
+}
+
+.container {
+  padding: 0 30px;
+}
+
+.sec {
+  /* background-color: rgb(206, 206, 206); */
+}
+
+.sec p {
+  font-size: 1rem;
+  text-align: center;
+  /* text-transform: uppercase; */
+  line-height: 2;
+  font-weight: 500;
+  padding: 0 30px;
+}
+
+.sec1 h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+
+/* Project Section */
+
+#proj1 {
+  width:80%;
+  height:100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 7px 0 rgba(0, 0, 0, 0.178);
+  
+}
+
+#proj1:hover {
+  box-shadow: 0 6px 7px 0 rgba(5, 142, 196, 0.178);
+}
+#proj1 img {
+  width: 100%;
+}
+
+#proj1 p {
+  padding: 20px;
+}
+
+#proj2 {
+  width:80%;
+  height:100%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 7px 0 rgba(0, 0, 0, 0.178)
+}
+
+#proj2:hover {
+  box-shadow: 0 6px 7px 0 rgba(5, 142, 196, 0.178);
+}
+#proj2 img {
+  width: 100%;
+}
+
+#proj2 p {
+  padding: 20px;
+}
+
+/* Contact Me */
+.sec3 {
+  padding: 0 30px;
+  text-align: center;
+  
+}
+
+.sec3 h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.sec3 .email{
+  border-bottom: 2px solid rgb(246, 246, 57);
+  background: rgba(0, 0, 0, 0.431);
+  margin: 20px 25px;
+  padding: 30px;
+  color: white
+}
+
+/* .email:hover {
+  padding: 10px;
+  background: rgb(194, 194, 194);
+  color: white;
+} */
+
+.email .m_email {
+  text-decoration: none;
+  color: black;
+} 
+
+.sec3 .phone {
+  border-bottom: 2px solid rgb(246, 246, 57);
+  background: rgba(0, 0, 0, 0.431);
+  margin: 20px 25px;
+  padding: 30px;
+  color: white
+}
+
+.phone .tel {
+  text-decoration: none;
+  margin-top: 20px;
+  color: white;
+  font-weight: 800;
+}
+
+
+footer{
+  height: 20vh;
+  width: 100%;
+  background: rgb(79, 87, 88);
+}
+
+footer p {
+  padding: 30px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+@media(min-width:1200px) {
+  #wshow h1{
+    font-size: 4rem;
+  }
+
+  body {
+    background: white;
+    color: rgb(59, 59, 59);
+  }
+
+  .container {
+    padding: 0 300px;
+  }
+}
+
+
+@media(min-width: 900px) {
+  body {
+    background: white;
+    color: rgb(59, 59, 59);
+  }
+
+  #wshow h2{
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .container {
+    padding: 0 300px;
+  }
+
+}
+@media(max-width: 800px) {
+  #wshow h1{
+    font-size: 2.8rem;
+    font-weight: 500;
+  }
+
+  #wshow h2{
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  #wshow {
+    padding: 0 1rem;
+  }
+
+  /* Navgation */
 .nav-btn{
   margin: 20px;
-  position: absolute;
+  position: fixed;
   left: 15px;
   top: -20px;
   /*background: rgb(187, 172, 172);*/
@@ -190,10 +449,10 @@ span:nth-child(3){
   font-size: 20px;
   font-weight: 700;
   animation: lnk_show;
-  animation-delay: 1s;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  opacity: 0;
+  animation-delay: 3s;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  opacity:0;
 }
 
 @keyframes lnk_show {
@@ -209,117 +468,41 @@ span:nth-child(3){
   z-index: 9990;
   opacity: 1;
   animation: wrapper_slide;
-  animation-duration: 1s;
+  animation-duration: 500ms;
   animation-fill-mode: forwards;
 }
 @keyframes wrapper_slide {
-  0%{top: -1000px;}
+  0%{top: -700px;}
   100%{top:0}
 }
 
 .hidden{
   opacity: 0;
 }
-
-.showcase {
-  background: url(../images/alone-clouds-golden-hour-670720.jpg);
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 60vh;
 }
 
-#wshow {
-  text-align: center;
-  position: relative;
-  top: 150px;
-  padding: 0 30px;
+@media(max-width:500px) {
+  #wshow h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  #wshow h2{
+    font-size: 1.3rem;
+    font-weight: 550;
+  }
+
+  #wshow {
+    padding: 0 1rem;
+  }
 }
 
-#wshow h1{
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
+/* Cursor */
+.txt-type > .txt {
+  border-right: 0.2rem solid white;
+
 }
 
-#wshow p {
-  color: white;
-  line-height: 1;
-}
-
-.container {
-  padding: 0 30px;
-}
-
-.sec {
-  /* background-color: rgb(206, 206, 206); */
-}
-
-.sec p {
-  text-align: center;
-  text-transform: capitalize;
-  line-height: 2;
-  font-weight: 500;
-  padding: 0 30px;
-}
-
-.sec1 h1 {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 300;
-  padding-bottom: 20px;
-  padding-top: 40px;
-}
-
-/* Project Section */
-
-#proj1 {
-  width:80%;
-  height:100%;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 6px 7px 0 rgba(0, 0, 0, 0.178);
-  
-}
-#proj1 img {
-  width: 100%;
-}
-
-#proj1 p {
-  padding: 20px;
-}
-
-#proj2 {
-  width:80%;
-  height:100%;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 6px 7px 0 rgba(0, 0, 0, 0.178)
-}
-#proj2 img {
-  width: 100%;
-}
-
-#proj2 p {
-  padding: 20px;
-}
-
-/* Contact Me */
-
-
-footer{
-  height: 20vh;
-  width: 100%;
-  background: rgb(79, 87, 88);
-}
-
-footer p {
-  padding: 30px;
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-}
 
 
  
