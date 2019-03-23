@@ -46,15 +46,15 @@ body {
 
 
 .showcase {
-  background: url(../images/alone-clouds-golden-hour-670720.jpg);
-  background-position: center center;
+  background: url(../images/image4.jpg);
+  background-position: center;
   background-size: cover;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   position: relative;
   bottom: 0;
   top: 0;
-  z-index: 10; 
+  z-index: 1; 
 }
 
 .showcase_overlay {
@@ -107,12 +107,130 @@ body {
   line-height: 1;
 }
 
+/* social media icon */
+.icon {
+  border: 1px solid black;
+  height: 50vh;
+  width: 100%;
+  /* background: #262626; */
+}
+
+.icon ul{
+  display: flex;
+  position: fixed;
+  top: 83%;
+  right: 0;
+  z-index: 20;
+}
+
+.icon ul li {
+  list-style: none;
+}
+
+.icon ul li a {
+  /* width: 50px;
+  height: 50px; */
+  background: #fff;
+  text-align: center;
+  /* line-height: 50px; */
+  font-size: 25px;
+  margin: 0 10px;
+  display: block;
+  /* border-radius: 50%; */
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #fff;
+  z-index: 1;
+}
+
+.icon ul li:nth-child(1) a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 12px 10px;
+}
+
+.icon ul li:nth-child(2) a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 12px 10px;
+}
+
+.icon ul li:nth-child(3) a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 12px 10px;
+}
+
+.icon ul li:nth-child(4) a {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+}
+
+.icon ul li a .fa {
+  position: relative;
+  color: #262626;
+  transition: .8s;
+}
+
+.icon ul li a:hover .fa {
+  color: #fff;
+  transform: rotate(360deg);
+  z-index: 3;
+}
+
+.icon ul li a:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 100%;
+  /* background: #f00;*/ 
+  transition: .8s;
+  z-index: 2;
+}
+
+
+
+.icon ul li a:hover:before {
+  top: 0;
+}
+
+
+.icon ul li:nth-child(1) a:before {
+  
+  background: #131418;
+}
+
+.icon ul li:nth-child(2) a:before {
+  background: #3b5999;
+}
+
+.icon ul li:nth-child(3) a:before {
+  background: #55acee;
+}
+
+.icon ul li:nth-child(4) a:before {
+  background: #e4405f;
+}
+
+
+
 .container {
   padding: 0 30px;
 }
 
 .sec {
   /* background-color: rgb(206, 206, 206); */
+  height: 100vh;
 }
 
 .sec p {
@@ -455,7 +573,7 @@ span:nth-child(3){
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%) ;
+  transform: translate(-50%,-50%);
   text-align: center;
 }
 

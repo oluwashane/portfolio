@@ -62,3 +62,49 @@ function init() {
   // Init TypeWriter
   new TypeWriter(textElement, words, wait);
 }
+
+/* Scroll_Fun */
+
+/* function smothScroll(target, duration) {
+  const tar = document.querySelector(target);
+  let targetPosition = tar.getBoundingClientRect().top;
+  let startPosition = window.pageYOffset;
+  let distance = targetPosition - startPosition;
+  let startTime = null;
+  
+  function animationScroll(currentTime) {
+    let timeElapsed;
+    if(startTime === null) {
+      startTime === currentTime;
+      timeElapsed = currentTime - startTime;
+      let run = ease(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, run);
+    }
+    if(timeElapsed < duration) {
+      requestAnimationFrame(animationScroll);
+    }
+  }
+
+  function ease(t, b, c, d) {
+    t /= d/2;
+    if (t < 1) return c/2*t*t + b;
+    t--;
+    return -c/2 * (t*(t-2) - 1) + b;
+  } 
+  requestAnimationFrame(animationScroll);
+}
+
+
+smothScroll('.about', 2000);
+ */
+/* let home = document.querySelector('.home');
+let about = document.querySelector('.about')
+
+home.addEventListener('click', function(e) {
+  smothScroll('.about', 10000);
+}); 
+
+about.addEventListener('click', function(e) {
+  e.preventDefault();
+  smothScroll('.about', 6000);
+}); */
