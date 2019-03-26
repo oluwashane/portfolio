@@ -251,7 +251,7 @@ body {
 
 .sec {
   /* background-color: rgb(206, 206, 206); */
-  height: 30vh;
+  height: 50vh;
 }
 
 .sec p {
@@ -330,7 +330,7 @@ body {
 }
 
 #form{
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -667,13 +667,23 @@ span:nth-child(3){
 
 @media(max-width:600px) {
 
-  
+  #form{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .icon ul{
+    display: flex;
+    position: fixed;
+    top: 87%;
+    right: 0;
+    z-index: 20;
+  }
+
   #wshow h1{
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 500;
   }
-  
-
   
   #wshow h2{
     font-size: 1.3rem;
