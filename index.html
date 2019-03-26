@@ -22,9 +22,9 @@
         <div id="wrapper">
           <ul>
             <li><a href="#" class="lnk lnk1 home">Home</a></li>
-            <li><a href="#about_page" class="lnk lnk2 about">About</a></li>
-            <li><a href="#" class="lnk lnk3 contact">Contact</a></li>
-            <li><a href="#" class="lnk lnk3 projects">Projects</a></li>
+            <li><a href="#about" class="lnk lnk2 about">About</a></li>
+            <li><a href="#contact" class="lnk lnk3 contact">Contact</a></li>
+            <li><a href="#projects" class="lnk lnk3 projects">Projects</a></li>
           </ul>
         </div>         
       </div>
@@ -32,16 +32,20 @@
     <div id="wshow">
       <h1>Hello I'm </h1>
       <h1>Udochukwu Chibuzor<br> 
-        <span class="txt-type" data-wait="3000" data-words='["Creative Design,", "Web & Media"]'></span>
+        
       </h1>
-      <a href="#about_page"><h2>About Me</h2></a>
+      <span class="txt-type" data-wait="3000" data-words='["Creative Design,", "Web & Media"]'></span>
+      <div id="">
+        <a href="#" id="test">About Me</a>
+      </div>
     </div>
+    
   </div>
   
   
   <main>
     <div class="container">
-      <section class="sec sec1" id="about_page">
+      <section class="sec sec1" id="about">
         <h1 class="sub_head">About Me</h1>
         <h2>I'm udochukwu chibuzor</h2>
         <p>
@@ -49,7 +53,7 @@
         </p>
       </section>
       
-      <section class="sec2 sec1">
+      <section class="sec2 sec1" id="projects">
         <h1 class="sub_head">Projects</h1>
         <div id="proj1">
           <img src="assets/images/alone-clouds-golden-hour-670720.jpg" id="img">
@@ -61,10 +65,19 @@
         </div>
         <div id="proj3"></div>
       </section>
-      <section class="sec3 sec1">
-        <form>
-  
-        </form>
+      <section class="sec3 sec1" id="contact">
+        <h3>Contact Me</h3>
+        <div id="form">
+          <form>
+            <p>Name*</p>
+            <input type="text" placeholder="Full Name" id="fullName"><br>
+            <p>Email*</p>
+            <input type="email" id="email" placeholder="Email@yahoo.com"><br>
+            <p>Message*</p>
+            <textarea name="message" id="msg" cols="30" rows="10"></textarea><br>
+            <button id="sendBtn">Send</button>
+          </form>
+        </div>
       </section>
     </div>
   </main>

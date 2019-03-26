@@ -5,10 +5,14 @@
 }
 
 body {
-  background: #333;
-  color: #ccc;
+  background: white;
+  color: #262626;
   height: 100vh;
 }
+
+/* .container{
+  border: 1px solid black;
+} */
 
 /* Nav */
 .hidden{
@@ -57,9 +61,11 @@ body {
   z-index: 1; 
 }
 
+
+
 .showcase_overlay {
   position: absolute;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.671);
   top: 0;
   bottom: 0;
   height: 100%;
@@ -81,6 +87,27 @@ body {
   text-align: center;
   height: 100%;
   padding: 0 3rem;
+}
+
+#wshow #test {
+  font-size: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  top: 60px;
+  border: 2px solid #fff;
+  padding: 20px;
+  animation-name: rat;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  opacity:0;
+}
+
+@keyframes rat {
+  0%{opacity: 0}
+  100%{opacity: 1}
 }
 
 #wshow h1{
@@ -108,12 +135,6 @@ body {
 }
 
 /* social media icon */
-.icon {
-  border: 1px solid black;
-  height: 50vh;
-  width: 100%;
-  /* background: #262626; */
-}
 
 .icon ul{
   display: flex;
@@ -230,7 +251,7 @@ body {
 
 .sec {
   /* background-color: rgb(206, 206, 206); */
-  height: 100vh;
+  height: 30vh;
 }
 
 .sec p {
@@ -301,8 +322,16 @@ body {
 /* Contact Me */
 .sec3 {
   padding: 0 30px;
-  text-align: center;
   margin-top: 40px;
+}
+
+::-webkit-input-placeholder {
+  padding-left: 1px;
+}
+
+#form{
+  width: 50%;
+  margin: 0 auto;
 }
 
 .sec3 h3 {
@@ -313,45 +342,50 @@ body {
   padding-top: 20px;
 }
 
-.sec3 .email{
-  border-bottom: 2px solid rgb(246, 246, 57);
-  background: rgba(0, 0, 0, 0.431);
-  margin: 20px 25px;
-  padding: 30px;
-  color: white
+.sec3 p {
+  padding: 5px 0;
+  font-size: 0.8em;
+  text-transform: capitalize;
 }
 
-/* .email:hover {
-  padding: 10px;
-  background: rgb(194, 194, 194);
-  color: white;
-} */
-
-.email .m_email {
-  text-decoration: none;
-  color: black;
-} 
-
-.sec3 .phone {
-  border-bottom: 2px solid rgb(246, 246, 57);
-  background: rgba(0, 0, 0, 0.431);
-  margin: 20px 25px;
-  padding: 30px;
-  color: white
+#fullName {
+  height: 5vh;
+  width: 98%;
+  padding: 4px;
+  margin-bottom: 20px;
 }
 
-.phone .tel {
-  text-decoration: none;
+#email {
+  height: 5vh;
+  width: 98%;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+#msg {
+  height: 20vh;
+  width: 98%;
+  padding: 4px;
+}
+
+
+.sec3 #sendBtn {
+  border: none;
+  background: #262626;
+  color:#fff;
+  padding: 10px 30px;
   margin-top: 20px;
-  color: white;
-  font-weight: 800;
+  margin-bottom: 30px;
+  width: 100%;
 }
+
+
 
 
 footer{
   height: 20vh;
   width: 100%;
-  background: rgb(79, 87, 88);
+  background: #262626;
 }
 
 footer p {
@@ -377,7 +411,7 @@ footer p {
 } */
 
 
-@media(min-width: 900px) {
+@media(min-width: 992px) {
   body {
     background: white;
     color: rgb(59, 59, 59);
@@ -389,7 +423,7 @@ footer p {
   }
 
   .container {
-    padding: 0 300px;
+    margin: 0 200px;
   }
 
 }
@@ -631,13 +665,16 @@ span:nth-child(3){
 }
 }
 
-@media(max-width:500px) {
+@media(max-width:600px) {
 
+  
   #wshow h1{
     font-size: 2.5rem;
     font-weight: 600;
   }
+  
 
+  
   #wshow h2{
     font-size: 1.3rem;
     font-weight: 550;
@@ -655,7 +692,13 @@ span:nth-child(3){
 /* Cursor */
 .txt-type > .txt {
   border-right: 0.2rem solid white;
-  font-size: 35px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  top: 15px;
+  font-size: 30px;
+  font-weight: 500;
+  overflow: hidden;
 }
 
 
