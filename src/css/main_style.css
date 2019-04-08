@@ -1,24 +1,22 @@
-* {
+body {
+  background: white;
+  color: #262626;
+  height: 100vh;
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  background: white;
-  color: #262626;
-  height: 100vh;
+.container{
+  margin: 0 30px;
 }
-
-/* .container{
-  border: 1px solid black;
-} */
 
 /* Nav */
-.hidden{
+.hidden {
   opacity: 0;
 }
-#wrapper ul{
+
+#wrapper ul {
   text-align: center;
   margin-top: 30px;
 }
@@ -27,8 +25,7 @@ body {
   display: inline-block;
 }
 
-#wrapper ul li a{
-  text-overflow: unset;
+#wrapper ul li a {
   text-decoration: none;
   text-transform: uppercase;
   color: white;
@@ -45,9 +42,6 @@ body {
   text-align: center;
   padding: 10px 10px;
 }
-
-
-
 
 .showcase {
   background: url(../images/image4.jpg);
@@ -98,6 +92,8 @@ body {
   top: 60px;
   border: 2px solid #fff;
   padding: 20px;
+  width: 20%;
+  margin: 0 auto;
   animation-name: rat;
   animation-duration: 2s;
   animation-delay: 1.5s;
@@ -243,15 +239,12 @@ body {
   background: #e4405f;
 }
 
-
-
-.container {
-  padding: 0 30px;
-}
-
 .sec {
   /* background-color: rgb(206, 206, 206); */
-  height: 50vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sec p {
@@ -267,7 +260,6 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
-  padding-bottom: 20px;
   padding-top: 40px;
 }
 
@@ -277,21 +269,37 @@ body {
 }
 
 /* Project Section */
+#projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project_head {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 80px;
+}
+
+.project {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.project img {
+  width: 100%;
+}
 
 #proj1 {
-  width:80%;
-  height:100%;
-  margin-left: auto;
-  margin-right: auto;
+  width:100%;
   box-shadow: 0 6px 7px 0 rgba(0, 0, 0, 0.178);
-  
 }
 
 #proj1:hover {
   box-shadow: 0 6px 7px 0 rgba(5, 142, 196, 0.178);
-}
-#proj1 img {
-  width: 100%;
 }
 
 #proj1 p {
@@ -299,23 +307,28 @@ body {
 }
 
 #proj2 {
-  width:80%;
-  height:100%;
-  padding-bottom: 20px;
-  margin-top: 60px;
-  margin-left: auto;
-  margin-right: auto;
+  width:100%;
   box-shadow: 0 6px 7px 0 rgba(0, 0, 0, 0.178)
 }
 
 #proj2:hover {
   box-shadow: 0 6px 7px 0 rgba(5, 142, 196, 0.178);
 }
-#proj2 img {
-  width: 100%;
-}
 
 #proj2 p {
+  padding: 20px;
+} 
+
+#proj3 {
+  width:100%;
+  box-shadow: 0 6px 7px 0 rgba(0, 0, 0, 0.178)
+}
+
+#proj3:hover {
+  box-shadow: 0 6px 7px 0 rgba(5, 142, 196, 0.178);
+}
+
+#proj3 p {
   padding: 20px;
 }
 
@@ -383,33 +396,18 @@ body {
 
 
 footer{
-  height: 20vh;
+  height: 10vh;
   width: 100%;
   background: #262626;
 }
 
 footer p {
-  padding: 30px;
+  padding: 20px;
   text-align: center;
   color: white;
   text-transform: uppercase;
+  font-size: 0.8rem;
 }
-
-/* @media(min-width:1200px) {
-  #wshow h1{
-    font-size: 4rem;
-  }
-
-  body {
-    background: rgb(150, 27, 27);
-    color: rgb(59, 59, 59);
-  }
-
-  .container {
-    padding: 0 50px;
-  }
-} */
-
 
 @media(min-width: 992px) {
   body {
@@ -443,18 +441,18 @@ footer p {
   }
 
   /* Navgation */
-.nav-btn{
-  margin: 20px;
-  position: fixed;
-  left: 15px;
-  top: -20px;
-  /*background: rgb(187, 172, 172);*/
-  width: 80px;
-  height: 80px;
-  /*border-radius: 50%;*/
-  z-index: 9999;
-  cursor: pointer;
-}
+  .nav-btn{
+    margin: 20px;
+    position: fixed;
+    left: 15px;
+    top: -20px;
+    /*background: rgb(187, 172, 172);*/
+    width: 80px;
+    height: 80px;
+    /*border-radius: 50%;*/
+    z-index: 9999;
+    cursor: pointer;
+  }
 
 .nav-btn span {
   background: #ffffff;
@@ -646,6 +644,7 @@ span:nth-child(3){
 }
 #wrapper ul li a:hover{
   color: rgb(168, 151, 151);
+  border: none; 
 }
 
 #nav:checked ~ #wrapper{
@@ -666,9 +665,10 @@ span:nth-child(3){
 }
 
 @media(max-width:600px) {
+  
 
   #form{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -697,10 +697,24 @@ span:nth-child(3){
   .container {
     padding: 0 10px;
   }
+
+  #wshow #test {
+    width: 30%;
+  }
+
+  #projects {
+    height: 100vh;
+    margin-top: 200px;
+  }
+
+  #contact {
+    margin-top: 250px;
+  }
+
 }
 
 /* Cursor */
-.txt-type > .txt {
+.text-type > .text {
   border-right: 0.2rem solid white;
   color: #fff;
   text-transform: uppercase;

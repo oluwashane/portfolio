@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="assets/css/main_style.css">
+  <link rel="stylesheet" href="src/css/main_style.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <title>Portflio</title>
 </head>
@@ -31,17 +31,12 @@
     </header>
     <div id="wshow">
       <h1>Hello I'm </h1>
-      <h1>Udochukwu Chibuzor<br> 
-        
-      </h1>
-      <span class="txt-type" data-wait="3000" data-words='["Creative Design,", "Web & Media"]'></span>
-      <div id="">
-        <a href="#about" id="test">About Me</a>
-      </div>
-    </div>
-    
+      <h1>Udochukwu Chibuzor</h1>
+      <span class="text-type" data-wait="3000" data-words='["Creative Design,", "Web & Media"]'>Hello</span>
+      </br>
+      <a href="#about" id="test">About Me</a>
+    </div>  
   </div>
-  
   
   <main>
     <div class="container">
@@ -53,18 +48,25 @@
         </p>
       </section>
       
-      <section class="sec2 sec1" id="projects">
-        <h1 class="sub_head">Projects</h1>
-        <div id="proj1">
-          <img src="assets/images/alone-clouds-golden-hour-670720.jpg" id="img">
-          <p>Sample Project One</p>
-        </div>
-        <div id="proj2">
-          <img src="assets/images/accounting-bill-black-53621.jpg" id="img">
-          <p>Sample Project One</p>
-        </div>
-        <div id="proj3"></div>
+      <section id="projects">
+        <h1 class="project_head">Projects</h1>
+        <section class="sec2 project">
+          <div id="proj1">
+            <img src="src/images/alone-clouds-golden-hour-670720.jpg" id="img">
+            <p>Sample Project One</p>
+          </div>
+          <div id="proj2">
+            <img src="src/images/accounting-bill-black-53621.jpg" id="img">
+            <p>Sample Project One</p>
+          </div>
+          <div id="proj3">
+            <img src="src/images/accounting-bill-black-53621.jpg" id="img">
+            <p>Sample Project One</p>
+          </div>
+        </section>
       </section>
+      
+
       <section class="sec3 sec1" id="contact">
         <h3>Contact Me</h3>
         <div id="form">
@@ -92,6 +94,6 @@
   <footer>
     <p>copyright portfolio</p>
   </footer>
-  <script src="assets/scripts/app.js"></script>
+  <script src="src/scripts/app.js"></script>
 </body>
 </html>
