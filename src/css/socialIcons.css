@@ -1,0 +1,99 @@
+/* social media icon */
+.icon ul{
+  display: flex;
+  position: fixed;
+  top: 83%;
+  right: 0;
+  z-index: 20;
+}
+
+.icon ul li {
+  list-style: none;
+}
+
+.icon ul li a {
+  background: #fff;
+  text-align: center;
+  font-size: 25px;
+  margin: 0 10px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #fff;
+  z-index: 1;
+}
+
+.icon ul li:nth-child(1) a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 12px 10px;
+}
+
+.icon ul li:nth-child(2) a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 12px 10px;
+}
+
+.icon ul li:nth-child(3) a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 12px 10px;
+}
+
+.icon ul li:nth-child(4) a {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+}
+
+.icon ul li a .fa {
+  position: relative;
+  color: #262626;
+  transition: .8s;
+}
+
+.icon ul li a:hover .fa {
+  color: #fff;
+  transform: rotate(360deg);
+  z-index: 3;
+}
+
+.icon ul li a:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 100%;
+  transition: .8s;
+  z-index: 2;
+}
+
+.icon ul li a:hover:before {
+  top: 0;
+}
+
+.icon ul li:nth-child(1) a:before {
+  
+  background: #131418;
+}
+
+.icon ul li:nth-child(2) a:before {
+  background: #3b5999;
+}
+
+.icon ul li:nth-child(3) a:before {
+  background: #55acee;
+}
+
+.icon ul li:nth-child(4) a:before {
+  background: #e4405f;
+}

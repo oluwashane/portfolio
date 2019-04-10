@@ -1,0 +1,60 @@
+.contact-section {
+  margin-top: 40px;
+}
+
+::-webkit-input-placeholder {
+  padding-left: 1px;
+}
+
+#form{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact-section h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.contact-section p {
+  padding: 5px 0;
+  font-size: 0.8em;
+  text-transform: capitalize;
+}
+
+#message {
+  height: 20vh;
+  width: 98%;
+  padding: 4px;
+}
+
+.contact-input {
+  height: 5vh;
+  width: 98%;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.contact-section #sendBtn {
+  border: none;
+  background: #262626;
+  color:#fff;
+  padding: 10px 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+@media(max-width: 800px) {
+  .contact-section {
+    margin-top: 40px;
+  }
+
+  #form{
+    width: 90%;
+    margin: 0 auto;
+  }
+}

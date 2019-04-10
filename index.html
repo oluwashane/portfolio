@@ -29,68 +29,86 @@
         </div>         
       </div>
     </header>
-    <div id="wshow">
+
+    <div id="showcaseText">
       <h1>Hello I'm </h1>
       <h1>Udochukwu Chibuzor</h1>
-      <span class="text-type" data-wait="3000" data-words='["Creative Design,", "Web & Media"]'>Hello</span>
+      <span class="text-type" data-wait="3000" data-words='["Frontend Developer","Design Innovations,", "Web & Media"]'></span>
       </br>
-      <a href="#about" id="test">About Me</a>
+      <a href="#about" id="aboutBtn">About Me</a>
     </div>  
   </div>
   
   <main>
     <div class="container">
-      <section class="sec sec1" id="about">
+      <section class="aboutMe-section" id="about">
         <h1 class="sub_head">About Me</h1>
         <h2>I'm udochukwu chibuzor</h2>
         <p>
-          I develop mobile-friendly websites, web applications and do creative graphic design. I'm also enthusiastic about cyber security. Well.. I'll just let my work speak for itself :)
+          I develop user friendly websites, web application. I also do little graphic works.
+          I'm also enthusiastic about cyber security.
+          and am open for collaborations. Well.. I'll just let my work speak for itself :)
         </p>
       </section>
       
-      <section id="projects">
-        <h1 class="project_head">Projects</h1>
-        <section class="sec2 project">
-          <div id="proj1">
-            <img src="src/images/alone-clouds-golden-hour-670720.jpg" id="img">
-            <p>Sample Project One</p>
+      <section id="projects" class="projectBlock ">
+        <h1 class="project-caption">Projects</h1>
+
+        <div class="projects-uipattern">
+          <div class="project-section">
+            <div class="project-image image1"></div>
+            <div class="project-detail">
+                <a href="#">Project One</a>
+            </div>
           </div>
-          <div id="proj2">
-            <img src="src/images/accounting-bill-black-53621.jpg" id="img">
-            <p>Sample Project One</p>
+
+          <div class="project-section">
+            <div class="project-image image2"></div>
+            <div class="project-detail">
+                <a href="#">Project Two</a>
+            </div> 
           </div>
-          <div id="proj3">
-            <img src="src/images/accounting-bill-black-53621.jpg" id="img">
-            <p>Sample Project One</p>
+
+          <div class="project-section">
+            <div class="project-image image3"></div>
+            <div class="project-detail">
+                <a href="#">Project Three</a>
+            </div>
           </div>
-        </section>
+        </div>
       </section>
       
-
-      <section class="sec3 sec1" id="contact">
+      <section class="contact-section" id="contact">
         <h3>Contact Me</h3>
         <div id="form">
           <form>
             <p>Name*</p>
-            <input type="text" placeholder="Full Name" id="fullName"><br>
+            <input class="contact-input" type="text" placeholder="Full Name" id="fullName"><br>
+
             <p>Email*</p>
-            <input type="email" id="email" placeholder="Email@yahoo.com"><br>
+            <input class="contact-input" type="email" id="email" placeholder="Email@yahoo.com"><br>
+
             <p>Message*</p>
-            <textarea name="message" id="msg" cols="30" rows="10"></textarea><br>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
             <button id="sendBtn">Send</button>
           </form>
         </div>
       </section>
     </div>
   </main>
+
   <div class="icon">
     <ul>
       <li><a href="#" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+
       <li><a href="#" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+
       <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></i></li>
+
       <li><a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a></li>
     </ul>
-  </div> 
+  </div>
+   
   <footer>
     <p>copyright portfolio</p>
   </footer>
