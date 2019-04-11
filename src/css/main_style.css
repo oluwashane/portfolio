@@ -324,8 +324,8 @@ footer p {
   }
 
   #showcaseText #aboutBtn {
-    padding: 10px;
-    width: 50%;
+    padding: 20px;
+    width: 30%;
     margin: 0 auto;
   }
 
@@ -344,7 +344,7 @@ footer p {
     text-transform: uppercase;
     position: relative;
     top: 15px;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 500;
     overflow: hidden;
   }
