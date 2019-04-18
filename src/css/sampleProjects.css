@@ -22,24 +22,49 @@
 .projects-uipattern {
   display: grid;
   grid-gap: 35px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .project-section {
-  height: 50vh;
+  width: 100%;
+  position: relative;
   box-shadow: var(--shadow);
-}
-
-.project-section:hover {
-  background: rgba(189, 2, 102, 0.274);
+  cursor: pointer;
 }
 
 .project-image {
-  height: 40vh;
+  height: 250px;
+  overflow: hidden;
+}
+
+.zoom {
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s ease-out;
+}
+
+.project-section:hover .zoom, .project-section:focus .zoom:hover {
+  transform: scale(1.4);
+}
+
+.zoom:before {
+  content: "";
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease-out;
+  background-color: var(--dark);
+}
+
+.project-section:hover .zoom::before, .project-section:focus .zoom::before {
+  display: block;
 }
 
 .image1 {
-  background: url(../images/image4.jpg) center;
+  background: url(../images/image4.jpg);
   background-size: cover;
 }
 

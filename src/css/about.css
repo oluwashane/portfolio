@@ -6,6 +6,7 @@
 }
 
 .aboutMe-section h1 {
+  text-align: center;
   text-transform: uppercase;
   font-weight: 300;
   padding-top: 40px;
@@ -14,15 +15,18 @@
 
 .aboutMe-section h2 {
   color: #262626;
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: -5px;
-  font-weight: 1000;
+  font-weight: 500;
 }
 
 .aboutMe-section p {
   color: #262626;
   font-size: 1rem;
+  text-align: center;
   text-transform: uppercase;
   line-height: 2.4;
   font-weight: 400;
+  padding: 0 20px;
 }

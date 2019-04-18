@@ -3,6 +3,13 @@
 @import "sampleProjects.css";
 @import "form.css";
 
+:root {
+  --primary-color: rgba(13, 110, 139, 0.75);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --dark: rgba(39, 38, 38, 0.733);
+  --menu-speed: 0.75s;
+}
+
 body {
   background: white;
   color: #262626;
@@ -12,69 +19,50 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
-  margin: 0 80px;
-}
-
-/* Nav */
-.hidden {
-  opacity: 0;
-}
-
-#wrapper ul {
-  text-align: center;
-  margin-top: 30px;
-}
-
-#wrapper ul li {
-  display: inline-block;
-}
-
-#wrapper ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: white;
-  font-size: 0.9em;
-  font-weight: 700;
-  padding-right: 25px;
-  transition-duration: 500ms;
-  transition-property: color, text-align, padding;
-}
-
-#wrapper ul li a:hover {
-  color: rgb(97, 97, 97);
-  border: 1px solid white;
-  text-align: center;
-  padding: 10px 10px;
-}
-
 .showcase {
-  background: url(../images/image4.jpg);
+  background-image: url(../images/image4.jpg);
   background-position: center;
   background-size: cover;
-  width: 100%;
   height: 100vh;
   position: relative;
-  bottom: 0;
-  top: 0;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .showcase_overlay {
   position: absolute;
-  background: rgba(0, 0, 0, 0.671);
-  top: 0;
-  bottom: 0;
-  height: 100%;
+  top:0;
+  background: var(--dark);
   width: 100%;
-  z-index: -13;
+  height: 100%;
+  z-index: -1;
+}
+
+.toggler {
+  visibility: hidden;
+}
+
+.menu-bar .menu ul {
+  text-align: center;
+}
+
+.menu-bar .menu ul li {
+  display: inline-block;
+}
+
+.menu ul li a {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-right: 25px;
 }
 
 #showcaseText {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   text-align: center;
+  flex-direction: column;
   height: 100%;
   padding: 0 3rem;
 }
@@ -102,12 +90,12 @@ body {
   100%{opacity: 1}
 }
 
-#showcaseText h1{
+#showcaseText h1 {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-weight: 200;
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin: 0.4rem;
 }
 
@@ -138,174 +126,6 @@ footer p {
   text-transform: uppercase;
   font-size: 0.8rem;
 }
-
-@media(max-width: 800px) {
-
-  /* Navgation */
-  .nav-btn{
-    margin: 20px;
-    position: fixed;
-    left: 15px;
-    top: -20px;
-    /*background: rgb(187, 172, 172);*/
-    width: 80px;
-    height: 80px;
-    /*border-radius: 50%;*/
-    z-index: 9999;
-    cursor: pointer;
-  }
-
-.nav-btn span {
-  background: #ffffff;
-  width: 30px;
-  display: block;
-  transition: all 1000ms ease
-}
-
-.nav-btn span:nth-child(1){
-  margin-top: 35px;
-  height: 2.6px;
-  animation: span1;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-  position: relative;
-}
-
-@keyframes span1 {
-  0%{opacity: 0;}
-  100%{opacity: 1;}
-}
-
-.nav-btn span:nth-child(2){
-  margin-top: 5px;
-  height: 2.6px;
-  animation: span2;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;  
-  position: relative;
-}
-
-@keyframes span2 {
-  0%{opacity: 0;}
-  100%{opacity: 1;}
-} 
-
-.nav-btn span:nth-child(3){
-  margin-top: 5px;
-  height: 2.6px;
-  width: 15px;
-  animation: span3;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-  position: relative;
-}
-
-@keyframes span3 {
-  0%{opacity: 0;}
-  100%{opacity: 1;}
-}
-
-#nav:checked + .nav-btn{
-  transform: rotate(45deg)
-}
-
-#nav:checked + .nav-btn span {
-  background: white;
-  transition: transform 500ms ease;
-}
-
-#nav:checked + .nav-btn span:nth-child(1){
-  transform:translateX(1px) translateY(24px) rotate(180deg);
-  width: 30px;
-  opacity: 1;
-}
-
-#nav:checked + .nav-btn span:nth-child(2){
-  transform: translateX(1px) translateY(17px) rotate(90deg);
-  width: 30px;
-  opacity: 1;
-}
-
-#nav:checked + .nav-btn span:nth-child(3){
-  display: none; 
-}
-
-#wrapper{
-  position: fixed;
-  top: -1000px;
-  left: 0;
-  background: rgba(73, 70, 70, 0.89);
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  opacity: 0;
-  text-align: center; 
-}
-
-#wrapper ul{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-}
-
-#wrapper ul li {
-  display: block;
-  max-width: 100%;
-  padding: 6%;  
-}
-
-.lnk{
-  line-height: 2;
-  text-decoration: none;
-  color: white;
-  outline: none;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  letter-spacing: 4px;
-  font-size: 50px;
-  font-weight: 700;
-  animation: lnk_show;
-  animation-delay: 2s;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  opacity:0;
-}
-
-@keyframes lnk_show {
-  0%{opacity: 0;}
-  100%{opacity: 1;}
-}
-#wrapper ul li a {
-  transition-property: color;
-  transition-duration: 400ms;
-}
-#wrapper ul li a:hover{
-  color: rgb(168, 151, 151);
-  border: none; 
-}
-
-#nav:checked ~ #wrapper{
-  z-index: 9990;
-  opacity: 1;
-  animation: wrapper_slide;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
-}
-@keyframes wrapper_slide {
-  0%{top: -700px;}
-  100%{top:0}
-}
-
-.hidden{
-  opacity: 0;
-}
-}
-
 /* Cursor */
 .text-type > .text {
   border-right: 0.2rem solid white;
@@ -318,24 +138,174 @@ footer p {
   overflow: hidden;
 }
 
+.container {
+  margin: 0 80px;
+}
+
 @media only screen and (max-width: 800px) {
-  .container{
+  /* Hamburger Navigation */
+  .menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .menu-bar .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+
+  .menu-bar .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    /* background: var(--dark); */
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.7s ease-out;
+  }
+
+  /* Burger Line; */
+  .menu-bar .hamburger > div {
+    position: relative;
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  /* Top line */
+  .menu-bar .hamburger > div:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    background: inherit;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+  }
+
+  .menu-bar .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    background: inherit;
+    top: 10px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+  }
+
+  .menu-bar .toggler:checked + .hamburger {
+    background: white;
+  }
+
+  /* Toggler animate */
+  .menu-bar .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+    background: black;
+  }
+
+  /* Turn lines into X */
+  .menu-bar .toggler:checked + .hamburger > div::before {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  .menu-bar .toggler:checked + .hamburger > div::after {
+    visibility: hidden;  
+  } 
+
+  /* Rotate on hover when checked */
+  .menu-bar .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+
+  /* Show menu */
+  .menu-bar .toggler:checked ~ .menu  {
+    visibility: visible;
+  }
+
+  .menu-bar .toggler:checked ~ .menu > div {
+    transform: scale(1);
+  } 
+
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+
+  .menu-bar .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  .menu-bar .menu > div {
+    background: #262626;
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-500px);
+    transition: all 0.7s ease-out;
+  } 
+
+  .menu-bar .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 1;
+    transition: opacity  0.4s ease;
+  } 
+
+  .menu-bar .menu > div > div > ul > li {
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .menu-bar .menu div div ul li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+  } 
+
+  .toggler {
+    visibility: visible;
+  }
+
+  .container {
     margin: 0 30px;
   }
 
-  #showcaseText #aboutBtn {
-    padding: 20px;
-    width: 30%;
-    margin: 0 auto;
-  }
-
-  #showcaseText h1{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    font-weight: 200;
+  #showcaseText h1 {
     font-size: 2.5rem;
-    margin: 0.4rem;
   }
 
   .text-type > .text {
@@ -344,8 +314,12 @@ footer p {
     text-transform: uppercase;
     position: relative;
     top: 15px;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     font-weight: 500;
     overflow: hidden;
+  }
+
+  #showcaseText #aboutBtn {
+    width: 40%;
   }
 }
