@@ -64,17 +64,17 @@
 }
 
 .image1 {
-  background: url(../images/image4.jpg);
+  background: url(../images/weatherApp.jpg);
   background-size: cover;
 }
 
 .image2 {
-  background: url(../images/image3.jpg) center;
+  background: url(../images/Book.jpg) center;
   background-size: cover;
 }
 
 .image3 {
-  background: url(../images/image2.jpg) center;
+  background: url(../images/image3.jpg) center;
   background-size: cover;
 }
 
@@ -90,5 +90,13 @@
   color: black;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.project-detail p {
+  padding: 0 40px;
+  line-height: 2rem;
+  text-transform: uppercase;
   font-size: 0.9rem;
+  font-weight: 200;
 }
