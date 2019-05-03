@@ -55,8 +55,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  transition: all 0.5s ease-out;
-  background-color: var(--dark);
+  background-color: rgba(39, 38, 38, 0.733);
 }
 
 .project-section:hover .zoom::before, .project-section:focus .zoom::before {
@@ -85,9 +84,9 @@
   text-align: center;
 }
 
-.project-detail a {
+.project-detail h4 {
   text-decoration: none;
-  color: black;
+  color: #262626;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.1rem;
@@ -99,4 +98,9 @@
   text-transform: uppercase;
   font-size: 0.9rem;
   font-weight: 200;
+  color: #262626
+}
+
+.projectLnk {
+  text-decoration: none;
 }
